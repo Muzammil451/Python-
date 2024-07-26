@@ -118,15 +118,120 @@ print(len(number1))
 number1=(1,2,3,4,5)
 number2=(6,7,8,9,10)
 number3=number1+number2
+print(number3)
+print(number1)
+print(number2)
+print(number3)
+print(len(number1))
+print(len(number2))
+print(len(number3))
+print(min(number3))
+number3[4:10]
+number3[4:9]
 
+# (1,3,5,7,9)
+number3[::2]
+number3[:6:4]
 
+# nested tuples
+number4=(1,2,3,4,5)
+number5=(6,7,8,9,10)
+number6=number4,number5
+print(number4)
+print(number5)
+print(number6)
+number6[0]
+number6[0][0]
+number6[0][2:5]
+print(number6[0][2])
+print(number6[0][4])
+number6[1][3]
+number6[1][0:4]
 
+name="Muzammil"
+age=12
+height=12.5
+print(name)
+print(age)
+height
 
+name='Muzammil'
+type(name)
+age=12
+type(age)
+height=13.5
 
+# dictionary
+my_dict={"key1":123,"key2":[12,23,33],"key3":["item0","item1","item2"]}
+# let's call items from the dictionary
+my_dict["key3"]
+# finding out the type
+type(my_dict)
+my_dict={'name':'Muzammil','sub':['Math','chem','phy'],'mark':[90,80,70]}
+my_dict['mark']
+my_dict={'key1':500}
+# Subract 123 from the value
+my_dict['key1']=my_dict['key1']-123
+# Check
+my_dict['key1']
+# Create a new dictionary
+d={}
+# Create a new key through assingment
+d['animal'] = ['Dog','Cat']
+# Can do this with any object
+d['answer']=42
+# Show
+d
+# Dictionary nested inside a dictionary nested inside a dictionary
+d={'key1':{'nestkey':{'subnestkey':'value'}}}
+# Keep calling the keys
+d['key1']['nestkey']['subnestkey']
+d={'worldcup':{'worldcup99':{'winner':'aus','runnerup':'pak'}}}
+# for getting the inner most value.
+d['worldcup']['worldcup99']['runnerup']
+# for getting the inner most value.
+d['worldcup']['worldcup99']['winner']
+d={'montessori':{'6-A':{'first position':'Muzammil','second position':'Ansharah'}}}
+# for getting the inner most value.
+d['montessori']['6-A']['first position']
+# for getting the inner most value.
+d['montessori']['6-A']['second position']
 
+# while loops
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+i = 1
+while i < 6:
+  print(i)
+  if (i == 3):
+    break
+  i += 1
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
 
+# Note that number 3 is missing in the result
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
 
+# For loops:
+numbers=[1,2,3,4,5,6,7,8,9]
+print(numbers)
+for numbers in numbers:
+  print(numbers)
+names=["jamal","ahsan","hassan","waqar"]
 
+for i in names:
+    print("hello your name is:  ",i)
 
 
 
