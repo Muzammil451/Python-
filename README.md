@@ -232,40 +232,214 @@ names=["jamal","ahsan","hassan","waqar"]
 
 for i in names:
     print("hello your name is:  ",i)
+numbers=range(0,200)
+print(numbers)
+for integer in range(0,200):
+    print(integer)
+for integer in range(0,200):
+    print(integer//5)
+for integer in range(0,200):
+    print(integer/5)
+for integer in range(0,200,2):
+    print(integer)
+for integer in range(1,50,2):
+    print(integer)
+total = 0
+for number  in range(1,21):
+    total += number
+    print(total)
+print("Your total from1 to 20 is: ",total)
+for i,j in zip(range(0,20), range(120,140)):
+    print(i,j)
+number = int(input("Enter the number for multiplication table"))
+print("Multiplication table:    ")
+print("--------------------")
+for i in range(1,13):
+    print(i, " x " ,number," = ", i*number)
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+
+num=[7757,5454,654]
+for i in range(len(num)):
+    num[i]+=1
+
+print(i)
+
+for i in "banana":
+    print(i)
+
+57%2
+
+age=13
+
+if age> 14 and grade ==2:
+  print("u can take addmisiion")
+elif age<14:
+  print("come after one year")
+else:
+  print("you'r not eligible")
 
 
+# Define a condition
+condition = True
+
+# Use the condition in an if-elif-else statement
+if condition:
+    print("Your condition is True")
+elif not condition:
+    print("Your condition is False")
+else:
+    print("This should not happen")
+
+if condition:
+    print("your condition")
+elif condition:
+    print("whatever you want")
+else:
+    print("again what you want")
+
+age=int(input("enter your age"))
+
+if age <13:
+  print("child")
+elif 13 <= age <20:
+  print("teen")
+else:
+  print("adult")
+
+# USER DEFINE FUNCTION
+
+def greet(name):
+    print(f"hello {name} welcome to NED university")
+
+greet("Muzammil")
+
+4*4
+
+def square(number):
+    x=number*number
+    return(x)
+
+# Multiply the length of rectangle by width of the rectangle
+def area_of_rec(length, width):
+  x=length+width-height
+  return(x)
+
+square(2)
+
+square(6)
+
+square(100)
+
+def area_of_rec(length,width):
+  x=length+width
+  return(x)
+
+area_of_rec(3,6)
+
+def area_of_rec(length,width,height):
+  x=length+width-height
+  return(x)
+
+area_of_rec(10,6,5)
+
+a=7
+b=8
+c=2
+y=a+b
+s=y-c
+
+s
+
+def volume(l,w,h):
+    x=l+w-h
+    return(x)
+
+volume(3,4,5)
+
+# Define the Dog class
+class Dog:
+    # This method initializes the object when it is created
+    def __init__(self, name, age):
+        self.name = name  # Attribute to store the dog's name
+        self.age = age    # Attribute to store the dog's age
+
+    # Method for the dog to bark
+    def bark(self):
+        print(f"{self.name} says: Woof!")
+
+    def play(self,toy):
+        return f"{self.name} plays with {toy} "
+
+    # Method to get the dog's age in dog years (1 human year = 7 dog years)
+    def get_dog_years(self):
+        return self.age * 7
+
+#Create instances (objects) of the Dog class
+my_dog = Dog("Buddy", 3)
+your_dog = Dog("Bella", 5)
+
+#Use the methods of the Dog class
+my_dog.bark()  # Output: Buddy says: Woof!
+your_dog.bark()  # Output: Bella says: Woof!
+
+#Get the dog's age in dog years
+print(f"{my_dog.name} is {my_dog.get_dog_years()} dog years old.")  # Output: Buddy is 21 dog years old.
+print(f"{your_dog.name} is {your_dog.get_dog_years()} dog years old.")  # Output: Bella is 35 dog years old.
 
 
+#reate instances (objects) of the dog claas
+my_dog=Dog("Buddy",3)
 
 
+#use the method of the dog class
+my_dog.bark()   # Output: buddy says: Woof!
 
+class CoffeeMaker:
+    def _init_(self, water_level, coffee_beans):
+        self.water_level = water_level  # in milliliters
+        self.coffee_beans = coffee_beans  # in grams
 
+    def make_coffee(self, cup_size):
+        if self.water_level >= cup_size and self.coffee_beans >= 10:
+            self.water_level -= cup_size
+            self.coffee_beans -= 10
+            print("Your coffee is ready!")
+        else:
+            print("Not enough water or coffee beans!")
 
+    def refill_water(self, amount):
+        self.water_level += amount
+        print(f"Refilled water by {amount}ml. Current water level: {self.water_level}ml.")
 
+    def add_coffee_beans(self, amount):
+        self.coffee_beans += amount
+        print(f"Added {amount}g of coffee beans. Current coffee beans: {self.coffee_beans}g.")
 
+#Create a coffeeMaker object
+my_coffee_maker=(500,100)
 
+# Bar graphs
+import seaborn as sns
+#Load the built-in 'mpg' dataset
+mpg_df = sns.load_dataset('mpg')
 
+#Display the first few rows of the dataset
+mpg_df.head()
 
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#Bar Chart: Average MPG by Origin
+plt.figure(figsize=(6, 4))
+sns.barplot(x='origin', y='mpg', data=mpg_df)
+plt.title('Average MPG by Origin')
+plt.xlabel('origin')
+plt.ylabel('Miles per gallon')
+plt.show()
 import numpy as np
 import IPython.display as display
 from matplotlib import pyplot as plt
@@ -286,3 +460,472 @@ image = F"data:image/png;base64,{base64.b64encode(data.getvalue()).decode()}"
 alt = "Sample Visualization"
 display.display(display.Markdown(F"""![{alt}]({image})"""))
 plt.close(fig)
+import seaborn as sns
+
+mpg_df = sns.load_dataset('mpg')
+
+mpg_df
+
+data=["cylinders"]
+
+students=["Mahad","Azfi","Hussain","Zainab"]
+marks=[80,85,70,90]
+plt.figure(figsize=(10, 6))
+
+#guess the number
+
+numcheck=int(input("enter your number between 1 to 10:"))
+
+if numcheck%2==0:
+  print("even")
+else:
+  print("odd")
+
+
+def calculate_price(coffee_type, size, sugar, temperature):
+    # Prices for different sizes
+    prices = {
+        'large': 4.50,
+        'medium': 3.50,
+        'small': 2.50
+    }
+
+    # Base price for each coffee type
+    base_prices = {
+        'americano': 1.50,
+        'espresso': 2.00,
+        'cappuccino': 2.50,
+        'black coffee': 3.00,
+        'milk coffer': 3.50,
+    }
+
+    # Calculate total price
+    base_price = base_prices.get(coffee_type, 0)
+    size_price = prices.get(size, 0)
+    total_price = base_price + size_price
+
+    # Print order details
+    print("\nOrder Details:")
+    print(f"Coffee: {coffee_type}")
+    print(f"Size: {size}")
+    print(f"Sugar: {'Yes' if sugar else 'No'}")
+    print(f"Temperature: {temperature}")
+    print(f"Price: ${total_price:.2f}")
+
+#Main function to handle user input
+def main():
+    print("Welcome to the coffee shop!")
+
+    # Ask user for coffee choice
+    print("\nWhat type of coffee would you like?")
+    print("1. Americano")
+    print("2. Espresso")
+    print("3. Cappuccino")
+    print("4. black coffee")
+    print("5. milk coffee")
+    choice = input("Enter your choice (1/2/3/4/5): ")
+
+    coffee_type = ''
+    if choice == '1':
+        coffee_type = 'americano'
+    elif choice == '2':
+        coffee_type = 'espresso'
+    elif choice == '3':
+        coffee_type = 'cappuccino'
+    elif choice == '4':
+        coffee_type = 'black coffee'
+    elif choice == '5':
+        coffee_type = 'milk coffe'
+    else:
+        print("Invalid choice. Please try again.")
+        return
+
+    # Ask user for sugar preference
+    sugar_input = input("Do you want to add sugar (yes/no)? ").lower()
+    if sugar_input == 'yes':
+        sugar = True
+    else:
+        sugar = False
+
+    # Ask user for temperature preference
+    temperature = input("Do you want it hot or cold? ").lower()
+
+    # Ask user for cup size
+    size = input("What size would you like (large/medium/small)? ").lower()
+    while size not in ['large', 'medium', 'small']:
+        print("Invalid size. Please choose again.")
+        size = input("What size would you like (large/medium/small)? ").lower()
+
+    # Calculate and print the price
+    calculate_price(coffee_type, size, sugar, temperature)
+    print("\nHere is your coffee. Enjoy!")
+
+#Run the main function
+if __name__ == "__main__":
+    main()
+
+
+class IceCreamOrder:
+    def __init__(self):
+        self.prices = {
+            'large': 5.00,
+            'medium': 4.00,
+            'small': 3.00
+        }
+        self.base_prices = {
+            'vanilla': 1.00,
+            'chocolate': 1.50,
+            'strawberry': 2.00,
+            'caramel': 2.50,
+            'blue berry': 3.00
+        }
+
+    def calculate_price(self, flavor, size, toppings):
+        base_price = self.base_prices.get(flavor, 0)
+        size_price = self.prices.get(size, 0)
+        total_price = base_price + size_price
+
+        # Add extra cost for toppings
+        if 'sprinkles' in toppings:
+            total_price += 0.50
+        if 'chocolate chips' in toppings:
+            total_price += 0.75
+
+        return total_price
+
+    def take_order(self):
+        print("Welcome to the ice cream parlor!")
+
+        # Ask user for flavor choice
+        print("\nWhat flavor would you like?")
+        print("1. Vanilla")
+        print("2. Chocolate")
+        print("3. Strawberry")
+        print("4. caramal")
+        print("5. blue berry")
+        choice = input("Enter your choice (1/2/3/4/5): ")
+
+        flavor = ''
+        if choice == '1':
+            flavor = 'vanilla'
+        elif choice == '2':
+            flavor = 'chocolate'
+        elif choice == '3':
+            flavor = 'strawberry'
+        elif choice == '4':
+            flavor = 'caramel'
+        elif choice == '5':
+            flavor = 'blue berry'
+        else:
+            print("Invalid choice. Please try again.")
+            return
+
+        # Ask user for size
+        size = input("What size would you like (large/medium/small)? ").lower()
+        while size not in ['large', 'medium', 'small']:
+            print("Invalid size. Please choose again.")
+            size = input("What size would you like (large/medium/small)? ").lower()
+
+        # Ask user for toppings
+        toppings = []
+        while True:
+            topping = input("Enter a topping you would like (sprinkles/chocolate chips/cookie/granola/syrup, or type 'done' to finish: ").lower()
+            if topping == 'done':
+                break
+            elif topping in ['sprinkles', 'chocolate chips', 'cookie', 'granola', 'syrup']:
+                toppings.append(topping)
+            else:
+                print("Invalid topping. Please choose again.")
+
+        # Calculate total price
+        total_price = self.calculate_price(flavor, size, toppings)
+
+        # Print order details
+        print("\nOrder Details:")
+        print(f"Ice Cream Flavor: {flavor}")
+        print(f"Size: {size}")
+        print("Toppings:", ', '.join(toppings) if toppings else "None")
+        print(f"Price: ${total_price:.2f}")
+
+#Main function to run the ice cream ordering process
+def main():
+    ice_cream_order = IceCreamOrder()
+    ice_cream_order.take_order()
+    print("\nHere is your ice cream. Enjoy!")
+
+#Run the main function
+if __name__ == "__main__":
+    main()
+
+import random
+
+class Game:
+    def __init__(self, lower_bound, upper_bound):
+        self.lower_bound = lower_bound
+        self.upper_bound = upper_bound
+        self.target_number = random.randint(lower_bound, upper_bound)
+        self.guesses = 0
+        self.game_over = False
+
+    def make_guess(self, guess):
+        self.guesses += 1
+        if guess < self.target_number:
+            return "Too low!"
+        elif guess > self.target_number:
+            return "Too high!"
+        else:
+            self.game_over = True
+            return f"Correct! You've guessed the number in {self.guesses} tries."
+
+    def is_game_over(self):
+        return self.game_over
+
+
+class Player:
+    def __init__(self, name):
+        self.name = name
+
+    def get_guess(self):
+        guess = input(f"{self.name}, enter your guess: ")
+        return int(guess)
+
+
+def main():
+    print("Welcome to 'Guess the Number'!")
+    player_name = input("Enter your name: ")
+    player = Player(player_name)
+
+    game = Game(1, 100)
+
+    while not game.is_game_over():
+        guess = player.get_guess()
+        result = game.make_guess(guess)
+        print(result)
+
+    print("Thank you for playing!")
+
+
+if __name__ == "__main__":
+    main()
+
+import random
+
+class Item:
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+
+class Enemy:
+    def __init__(self, name, health):
+        self.name = name
+        self.health = health
+
+    def is_alive(self):
+        return self.health > 0
+
+    def take_damage(self, damage):
+        self.health -= damage
+
+class Room:
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+        self.items = []
+        self.enemy = None
+
+    def add_item(self, item):
+        self.items.append(item)
+
+    def set_enemy(self, enemy):
+        self.enemy = enemy
+
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.health = 100
+        self.inventory = []
+
+    def take_damage(self, damage):
+        self.health -= damage
+
+    def collect_item(self, item):
+        self.inventory.append(item)
+
+    def is_alive(self):
+        return self.health > 0
+
+class Game:
+    def __init__(self):
+        self.player = None
+        self.rooms = {}
+        self.current_room = None
+
+    def setup(self):
+        self.player = Player(input("Enter your name: "))
+
+        # Create rooms
+        room1 = Room("Hall", "A dimly lit hall.")
+        room2 = Room("Kitchen", "A smelly kitchen.")
+        room3 = Room("Cave", "A dark, damp cave.")
+
+        # Add items to rooms
+        room1.add_item(Item("Flashlight", "A useful tool to see in the dark."))
+        room2.add_item(Item("Knife", "A sharp kitchen knife."))
+        room3.set_enemy(Enemy("Goblin", 30))
+
+        # Connect rooms
+        self.rooms = {
+            "Hall": room1,
+            "Kitchen": room2,
+            "Cave": room3,
+        }
+
+        self.current_room = room1
+
+    def play(self):
+        while self.player.is_alive():
+            print(f"\nYou are in the {self.current_room.name}.")
+            print(self.current_room.description)
+
+            if self.current_room.items:
+                print("You see: " + ", ".join(item.name for item in self.current_room.items))
+            if self.current_room.enemy:
+                print(f"A wild {self.current_room.enemy.name} appears!")
+
+            command = input("What do you want to do? (explore/take/fight/exit) ").lower()
+
+            if command == "explore":
+                self.explore()
+            elif command == "take":
+                self.take_item()
+            elif command == "fight":
+                self.fight()
+            elif command == "exit":
+                print("Thanks for playing!")
+                break
+            else:
+                print("Invalid command.")
+
+    def explore(self):
+        next_room = input("Which room do you want to go to? (Kitchen/Cave) ")
+        if next_room in self.rooms:
+            self.current_room = self.rooms[next_room]
+        else:
+            print("Room not found!")
+
+    def take_item(self):
+        if self.current_room.items:
+            item = self.current_room.items.pop()
+            self.player.collect_item(item)
+            print(f"You took the {item.name}.")
+        else:
+            print("There are no items here.")
+
+    def fight(self):
+        if self.current_room.enemy:
+            enemy = self.current_room.enemy
+            print(f"You are fighting {enemy.name}!")
+
+            while enemy.is_alive() and self.player.is_alive():
+                action = input("Do you want to (attack/run)? ").lower()
+                if action == "attack":
+                    damage = random.randint(5, 20)
+                    enemy.take_damage(damage)
+                    print(f"You dealt {damage} damage to {enemy.name}.")
+                    if enemy.is_alive():
+                        enemy_damage = random.randint(5, 15)
+                        self.player.take_damage(enemy_damage)
+                        print(f"{enemy.name} dealt {enemy_damage} damage to you.")
+                elif action == "run":
+                    print("You ran away!")
+                    break
+                else:
+                    print("Invalid action.")
+
+            if not enemy.is_alive():
+                print(f"You defeated {enemy.name}!")
+                self.current_room.enemy = None
+        else:
+            print("There is no enemy here to fight.")
+
+def main():
+    game = Game()
+    game.setup()
+    game.play()
+
+if __name__ == "__main__":
+    main()
+
+
+import pygame
+
+pygame.init()
+screen = pygame.display.set_mode((400, 500))
+done = False
+
+while not done:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    pygame.display.flip()
+
+pygame.quit()
+
+
+class Sphere:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def calculate_volume(self):
+        return (4/3) * math.pi * (self.radius ** 3)
+
+#Create an instance of the Sphere class
+radius = float(input("Enter the radius of the sphere: "))
+my_sphere = Sphere(radius)
+
+#Calculate and print the volume of the sphere
+volume = my_sphere.calculate_volume()
+print(f"Volume of the sphere with radius {my_sphere.radius} is: {volume:.2f} cubic units.")
+
+import math
+
+#Define the Sphere class
+class Sphere:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def calculate_volume(self):
+        return (4/3) * math.pi * (self.radius ** 3)
+
+#Create an instance of the Sphere class
+my_sphere = Sphere(5)
+
+#Calculate and print the volume of the sphere
+volume = my_sphere.calculate_volume()
+print(f"Volume of the sphere with radius {my_sphere.radius} is: {volume:.2f} cubic units.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
