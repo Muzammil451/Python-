@@ -18,7 +18,7 @@ print(a==y)
 print(10.0.is_integer())
 print(10.4.is_integer())
 print(10.5.is_integer())
-
+ 
 ans=float(4.2)
 print(ans+4)
 print(ans+5)
